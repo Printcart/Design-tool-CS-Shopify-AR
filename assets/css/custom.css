@@ -1,0 +1,312 @@
+/*Enter Your Custom CSS Here*/
+.tool_draw li a.menuUp {
+    opacity: 1;
+}
+#tab-font .sub-menu {
+    padding: 20px 10px;
+}
+#tab-font .sub-menu .toolbar-font-search {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 100%;
+}
+#tab-font .sub-menu .toolbar-font-search>input {
+    width: 100%;
+    border: none;
+    webkit-box-shadow: 1px 0 21px rgb(0 0 0 / 15%);
+    box-shadow: 1px 0 21px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    padding: 10px 35px 10px 10px;
+}
+#tab-font .sub-menu .toolbar-font-search i.icon-nbd-clear {
+    top: 22px;
+}
+#tab-font .sub-menu .toolbar-menu-header .toolbar-separator {
+    color: #fff;
+    padding: 4px;
+    background: #000000;
+    border-radius: 4px;
+    font-size: 14px;}
+#tab-font .sub-menu ul.sub-menu-items {
+    /*position:  relative;*/
+    padding: 4px 0;
+    margin-top: 12px;
+}
+#tab-font .sub-menu li.sub-menu-item {
+    width: 50%;
+    padding: 10px;
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 22px;
+}
+#tab-font .sub-menu li.sub-menu-item span.font-name-wrap .font-name {
+    font-size: 18px;
+}
+.nbd-close.close-designtool i {
+    color:  #f00;
+}
+
+.nbd-sidebar #tab-product-template .templates-category {
+    margin-top: 20px;
+    padding:  0 10px;
+}
+
+.nbd-sidebar #tab-product-template .templates-category .nbd-button {
+    width: 100%;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: unset;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.nbd-sidebar #tab-product-template .templates-category .nbd-button i, .nbd-sidebar #tab-product-template .templates-category .nbd-button span {
+    color: #fff;
+}
+.nbd-sidebar #tab-product-template .templates-category .nbd-button i {
+    font-size: 24px;
+}
+.nbd-sidebar #tab-product-template .templates-category .nbd-button .nbd-sub-dropdown {
+    width: 100%;
+    top: calc(100% + 5px);
+}
+.nbd-sidebar #tab-product-template .templates-category .nbd-button ul {
+    min-width: 220px;
+    max-height: 250px;
+    margin: 10px 0;
+}
+.nbd-sidebar #tab-product-template .templates-category .nbd-button ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 20px;
+}
+.nbd-sidebar #tab-product-template .templates-category .nbd-button ul li span {
+    color: #000000;
+    text-transform: capitalize;
+}
+.nbd-sidebar #tab-product-template #tab-template {
+    padding: 0;
+    padding-top: 20px;
+}
+.nbd-sidebar #tab-product-template .tab-main {
+    margin-top: 10px;
+    height: calc(100% - 70px);
+}
+
+.pc-tab-nav .nbd-tabs {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+
+}
+.pc-tab-nav .nbd-tabs .nbd-tab {
+    padding: 7px 10px;
+    cursor: pointer;
+    -webkit-border-radius: 2px;
+    border-bottom: none;
+    border-radius: 5px;
+    flex-grow: 1;
+    margin-right: 4px;
+    background: #d2d5dc;
+    border: 1px #000000 solid;
+}
+.pc-tab-nav .nbd-tabs .nbd-tab .title {
+    color: #000000;
+}
+.pc-tab-nav .nbd-tabs .nbd-tab.active .title {
+    color: #fff;
+}
+.pc-tab-nav .nbd-tabs .nbd-tab.active {
+    background: #000000;
+}
+.nbd-sidebar .tabs-content .nbd-search {
+    position: relative !important;
+}
+.nbd-sidebar #tab-svg .cliparts-category, #tab-element .tab-main, #tab-photo .tab-main {
+    margin-top: 0 !important;
+}
+.pc-tab-clipart {
+    padding: 0 10px;
+    margin-bottom: 12px;
+}
+#tab-svg .nbd-tab-contents {
+    height: 100%;
+}
+#tab-svg .nbd-tab-contents .nbd-tab-content {
+    height: 100%;
+}
+.sidebar-icon {
+    width: 30px;
+    height: 30px;
+}
+.nbd-sidebar .tabs-nav {
+    background: #ffffff;
+}
+.nbd-sidebar .tabs-nav ul.main-tabs .tab span {
+    color: #000000;
+}
+#tab-photo .nbd-items-dropdown .result-tab-upload {
+    margin-top: 0;
+    padding-top: 20px;
+    margin: 20px 10px 0 10px;
+    position: relative;
+}
+.nbd-sidebar #tab-photo .result-tab-upload .content-items div[data-type=image-upload].accept .form-upload {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.nbd-sidebar #tab-photo .result-tab-upload .content-items div[data-type=image-upload] .form-upload i:before {
+    color: #000000;
+    font-weight: bold;
+}
+.nbd-sidebar #tab-photo .result-tab-upload .content-items div[data-type=image-upload] .form-upload {
+    color: #000000;
+    font-weight: bold;
+    margin: 20px 10px;
+    border: 2px dashed #fff;
+    padding: 30px 10px;
+    pointer-events: auto;
+    opacity: .5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.nbd-sidebar #tab-photo .result-tab-upload .content-items div[data-type=image-upload] .allow-size {
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+.nbd-sidebar #tab-photo .result-tab-upload .content-items div[data-type=image-upload] .allow-size span {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.nbd-sidebar #tab-photo .result-tab-upload .content-items div[data-type=image-upload].accept .form-upload i {
+    cursor: pointer;
+}
+.nbd-sidebar #tab-photo .result-tab-upload .content-items div[data-type=image-upload] .form-upload i {
+    pointer-events: auto;
+    cursor: none;
+    font-size: 40px;
+    margin-right: 5px;
+    color: #000000;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.nbd-sidebar #tab-photo .result-tab-upload .content-items div[data-type=image-url] .form-group {
+    padding: 0 10px;
+}
+.nbd-sidebar #tab-photo .result-tab-upload .content-items div[data-type=image-url] .form-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.nbd-sidebar #tab-photo .result-tab-upload .content-items div[data-type=image-url] .form-group .input-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.nbd-sidebar #tab-photo .result-tab-upload .content-items div[data-type=image-url] .form-group .input-group input {
+    padding: 3px 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+    width: 100%;
+}
+.nbd-sidebar #tab-photo .result-tab-upload .content-items div[data-type=image-url] .form-group .input-group button {
+    border: none;
+    background-color: #000000;
+    color: #fff;
+    margin: 0;
+    border-radius: 0 3px 3px 0;
+    padding: 0;
+}
+#selectedTab span {
+    display: none;
+}
+.nbd-main-bar ul.menu-right .menu-item.item-process,
+.nbd-button {
+    border-radius: 10px;
+    background: #000000;
+}
+.nbd-sidebar input, .nbd-sidebar span {
+    color: #000000;
+}
+#tab-typography .text-heading {
+    color: #000000;
+}
+#tab-typography .text-sub-heading {
+    color: #000000;
+}
+.nbd-button {
+    background: #000000;
+}
+body {
+    color: #000000;
+    background-color: #fff;
+}
+.icon-nbd {
+    color: #000000;
+}
+.nbd-main-menu .sub-menu {
+    color: #000000;
+}
+.tip-image {
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+}
+.nbd-products .nbd-product {
+    width: 50%;
+    padding: 5px;
+    display: inline-block;
+}
+.nbd-products .nbd-product-wrap {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.nbd-products .nbd-product-image {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+}
+.nbd-load-page .loader:before {
+    padding-top: 0;
+}
+@media screen and (max-width: 767px) {
+    .nbd-sidebar .tabs-nav ul.main-tabs .tab i, .nbd-sidebar .tabs-nav ul.main-tabs .tab span {
+    color: #000000;
+}
