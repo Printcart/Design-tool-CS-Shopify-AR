@@ -135,12 +135,12 @@
                                 <span class="hide-tablet"><i class="icon-nbd icon-nbd-fomat-top-left rotate-135"></i></span>
 
                                 <!-- tab-product -->
-                                <div class="tab active tab-first" id="tab-product" nbd-scroll="scrollLoadMore(container, type)" data-container="#tab-product" data-type="product" data-offset="20">
+                                <div class="tab active tab-first" id="tab-product" nbd-scroll="scrollLoadMoreProduct(container, type)" data-container="#tab-product" data-type="product" data-offset="20">
                                     <h4><b>Products</b></h4>
                                     <div class="tab-main tab-scroll">
                                         <div class="nbd-products">
                                             <div class="nbd-products-container">
-                                                <div class="nbd-product" title="Select Product" ng-click="changeProduct( product.id )" ng-repeat="product in resource.products.data">
+                                                <div class="nbd-product" title="Select Product" ng-click="changeProduct( product.id )" ng-repeat="product in resource.products.filtereProducts">
                                                     <div class="nbd-product-wrap">
                                                         <div class="nbd-product-image" ng-style="{'background-image': 'url(' + product.product_image.url + ')'}"></div>
                                                         <div class="nbd-product-title">
@@ -156,12 +156,12 @@
                                                     <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
                                                 </svg>
                                             </div>
-                                            <div class="tab-load-more ng-hide" ng-show="!resource.templates.onload && ( resource.templates.next || 
-                                            resource.templates.total > resource.templates.currentPage * resource.templates.perPage )">
-                                                <a class="nbd-button" ng-click="scrollLoadMoreTemp()">Load more</a>
+                                            <div class="tab-load-more ng-hide" ng-show="!resource.products.onload && ( resource.products.next || 
+                                            resource.products.total > resource.products.currentPage * resource.products.perPage )">
+                                                <a class="nbd-button" ng-click="scrollLoadMoreProduct()">Load more</a>
                                             </div>
                                         </div>
-                                        <div ng-if="resource.templates.filtereTemps.length == 0 && !resource.templates.onload" class="nbd-templates">
+                                        <div ng-if="resource.products.filtereProducts.length == 0 && !resource.products.onload" class="nbd-products">
                                             No results!
                                         </div>
                                     </div>
@@ -203,7 +203,7 @@
                                                     <a class="nbd-button" ng-click="scrollLoadMoreTemp()">Load more</a>
                                                 </div>
                                             </div>
-                                            <div ng-if="resource.templates.filtereTemps.length == 0 && !resource.templates.onload" class="nbd-templates">
+                                            <div ng-if="resource.templates.filtereTemps.length == 0  && !resource.products.onload" class="nbd-templates">
                                                 No results!
                                             </div>
                                         </div>

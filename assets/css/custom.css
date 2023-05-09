@@ -306,7 +306,34 @@ body {
 .nbd-load-page .loader:before {
     padding-top: 0;
 }
+.nbd-popup.popup-select .main-popup .head {
+    background-color: #000000;
+}
+.nbd-popup.popup-select .main-popup .body .main-select .nbd-button.select-no {
+    background-color: #989898;
+}
+.tooltipster-sidetip.tooltipster-borderless .tooltipster-box {
+    background: #000000;
+}
+.tooltipster-sidetip.tooltipster-borderless.tooltipster-top .tooltipster-arrow-border {
+    border-top-color: #000000;
+}
+#tab-product .tab-scroll {
+    height: calc(100% - 60px);
+}
+#tab-product .loading-photo {
+    width: 40px;
+    height: 40px;
+    display: none;
+}
 @media screen and (max-width: 767px) {
     .nbd-sidebar .tabs-nav ul.main-tabs .tab i, .nbd-sidebar .tabs-nav ul.main-tabs .tab span {
-    color: #000000;
+        color: #000000;
+    }
+    .nbd-main-bar ul.menu-left {
+        background-color: #ffffff;
+    }
+    .nbd-main-bar ul.menu-left span {
+        color: #000000;
+    }
 }
