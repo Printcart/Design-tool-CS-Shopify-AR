@@ -326,6 +326,12 @@ body {
     height: 40px;
     display: none;
 }
+h3, h4, input, p, span, textarea {
+    color: #000000;
+}
+.nbd-main-menu button span, .nbd-main-menu li span {
+    color: #000000;
+}
 @media screen and (max-width: 767px) {
     .nbd-sidebar .tabs-nav ul.main-tabs .tab i, .nbd-sidebar .tabs-nav ul.main-tabs .tab span {
         color: #000000;
