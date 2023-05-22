@@ -358,6 +358,29 @@ h3, h4, input, p, span, textarea {
     height: 120px;
     width: auto;
 }
+.nbd-sidebar .nbd-items-dropdown .loading-photo {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+/*#default-clipart-tab .clipart-next {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%) rotate(90deg);
+    z-index: 99;
+    cursor: pointer;
+}
+#default-clipart-tab .clipart-prev {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%) rotate(-90deg);
+    z-index: 99;
+    cursor: pointer;
+}*/
+
 @media screen and (max-width: 767px) {
     .nbd-sidebar .tabs-nav ul.main-tabs .tab i, .nbd-sidebar .tabs-nav ul.main-tabs .tab span {
         color: #000000;
