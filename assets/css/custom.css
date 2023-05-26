@@ -349,6 +349,7 @@ h3, h4, input, p, span, textarea {
 .nbd-sidebar #default-clipart-tab .nbd-items-dropdown {
     margin-bottom: 10px;
     padding: 0;
+    min-height: 120px;
 }
 #default-clipart-tab .clipart-wrap .clipart-item {
     width: auto;
@@ -364,23 +365,39 @@ h3, h4, input, p, span, textarea {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-/*#default-clipart-tab .clipart-next {
+#default-clipart-tab .clipart-next {
     position: absolute;
     top: 50%;
-    right: 5px;
-    transform: translateY(-50%) rotate(90deg);
+    right: -6px;
+    transform: translateY(-50%);
     z-index: 99;
     cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    color: #ffffffe6;
+    padding: 0;
+    width: 24px;
 }
 #default-clipart-tab .clipart-prev {
     position: absolute;
     top: 50%;
-    left: 5px;
-    transform: translateY(-50%) rotate(-90deg);
+    left: -6px;
+    transform: translateY(-50%);
     z-index: 99;
     cursor: pointer;
-}*/
+    background-color: transparent;
+    border: 0;
+    color: #ffffffe6;
+    padding: 0;
+    width: 24px;
+}
 
+.md-chips, body, button, html, input, md-bottom-sheet .md-subheader, select, textarea {
+    font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Lato', sans-serif;
+}
 @media screen and (max-width: 767px) {
     .nbd-sidebar .tabs-nav ul.main-tabs .tab i, .nbd-sidebar .tabs-nav ul.main-tabs .tab span {
         color: #000000;
