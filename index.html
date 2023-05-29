@@ -154,10 +154,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="loading-photo" >
-                                                <svg class="circular" viewBox="25 25 50 50">
-                                                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-                                                </svg>
+                                            <div class="printcart-loading loading-photo">
+                                                <div class="box1"></div>
+                                                <div class="box2"></div>
+                                                <div class="box3"></div>
                                             </div>
                                             <div class="tab-load-more ng-hide" ng-show="!resource.products.onload && ( resource.products.next || 
                                             resource.products.total > resource.products.currentPage * resource.products.perPage )">
@@ -196,17 +196,17 @@
                                                     </div>
                                                     <div class="pointer"></div>
                                                 </div>
-                                                <div class="loading-photo" >
-                                                    <svg class="circular" viewBox="25 25 50 50">
-                                                        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-                                                    </svg>
+                                                <div class="printcart-loading loading-photo">
+                                                    <div class="box1"></div>
+                                                    <div class="box2"></div>
+                                                    <div class="box3"></div>
                                                 </div>
                                                 <div class="tab-load-more ng-hide" ng-show="!resource.templates.onload && ( resource.templates.next || 
                                                 resource.templates.total > resource.templates.currentPage * resource.templates.perPage )">
                                                     <a class="nbd-button" ng-click="scrollLoadMoreTemp()">Load more</a>
                                                 </div>
                                             </div>
-                                            <div ng-if="resource.templates.filtereTemps.length == 0  && !resource.products.onload" class="nbd-templates">
+                                            <div ng-if="resource.templates.filtereTemps.length == 0  && !resource.templates.onload" class="nbd-templates">
                                                 No results!
                                             </div>
                                         </div>
@@ -244,7 +244,7 @@
                                 <!-- end tab Typography -->
 
                                 <!-- tab-clipart -->
-                                <div class="tab nbd-onload" ng-if="settings['nbdesigner_enable_clipart'] == 'yes'" id="tab-svg" nbd-scroll="scrollLoadMore(container, type)" data-container="#tab-svg" data-type="clipart" data-offset="20">
+                                <div class="tab nbd-onload" ng-if="settings['nbdesigner_enable_clipart'] == 'yes'" id="tab-svg">
                                     <div class="nbd-tab-contents">
                                         <div class="tab-scroll">
                                             <div class="nbd-tab-content active" id="default-clipart-tab">
@@ -252,9 +252,6 @@
                                                     <div class="printcart-storage-title">
                                                         <div class="printcart-title">
                                                             {{cat.name}}
-                                                        </div>
-                                                        <div class="printcart-show-all">
-                                                            Show all
                                                         </div>
                                                     </div>
                                                     <div class="printcart-clipart">
@@ -281,13 +278,18 @@
                                                                 </svg>
                                                             </span>
                                                         </button>
-                                                        <div class="loading-photo" >
+                                                        <div class="loading-photo" style="display: none;">
                                                             <svg class="circular" viewBox="25 25 50 50">
                                                                 <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
                                                             </svg>
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="printcart-loading">
+                                                <div class="box1"></div>
+                                                <div class="box2"></div>
+                                                <div class="box3"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1711,10 +1713,10 @@
 
                             <!-- modern/loading-workflow -->
                             <div class="loading-workflow">
-                                <div class="loader">
-                                    <svg class="circular" viewBox="25 25 50 50">
-                                        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-                                    </svg>
+                                <div class="loaded printcart-loading">
+                                    <div class="box1"></div>
+                                    <div class="box2"></div>
+                                    <div class="box3"></div>
                                 </div>
                             </div>
                             <!-- end mordern loading-workflow -->
@@ -2199,10 +2201,10 @@
                     <div class="main-popup">
                         <i class="icon-nbd icon-nbd-clear close-popup"></i>
                         <div class="overlay-main active">
-                            <div class="loaded">
-                                <svg class="circular" viewBox="25 25 50 50">
-                                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-                                </svg>
+                            <div class="loaded printcart-loading">
+                                <div class="box1"></div>
+                                <div class="box2"></div>
+                                <div class="box3"></div>
                             </div>
                         </div>
                         <div class="head">
@@ -2463,8 +2465,10 @@
 
         <!-- Loading page -->
         <div class="nbd-load-page">
-            <div class="loader">
-                <img src="./assets/image/logo_noir.png" />
+            <div class="printcart-loading">
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
             </div>
         </div>
         <script type='text/javascript' src="https://d2lp2jhrzjca64.cloudfront.net/assets/js/jquery.min.js"></script>
