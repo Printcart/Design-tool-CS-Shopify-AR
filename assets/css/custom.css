@@ -332,6 +332,354 @@ h3, h4, input, p, span, textarea {
 .nbd-main-menu button span, .nbd-main-menu li span {
     color: #000000;
 }
+.typography-items .typography-item img {
+    filter: grayscale(100%);
+}
+.nbd-sidebar #tab-svg #default-clipart-tab .tab-main {
+    height: initial;
+}
+#default-clipart-tab {
+    padding: 10px 12px 10px 10px;
+}
+#default-clipart-tab .clipart-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.nbd-sidebar #default-clipart-tab .nbd-items-dropdown {
+    margin-bottom: 10px;
+    padding: 0;
+    min-height: 120px;
+}
+#default-clipart-tab .clipart-wrap .clipart-item {
+    width: auto;
+}
+#default-clipart-tab .clipart-wrap .clipart-item img {
+    max-width: initial;
+    height: 120px;
+    width: auto;
+}
+.nbd-sidebar .nbd-items-dropdown .loading-photo {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#default-clipart-tab .clipart-next {
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+    z-index: 99;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    color: #ffffffe6;
+    padding: 0;
+    width: 24px;
+    height: 100%;
+}
+#default-clipart-tab .clipart-prev {
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    transform: translateY(-50%);
+    z-index: 99;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    color: #ffffffe6;
+    padding: 0;
+    width: 24px;
+    height: 100%;
+}
+#default-clipart-tab .clipart-next:hover,
+#default-clipart-tab .clipart-prev:hover {
+    background-color: rgba(0,0,0,.4);
+    border-radius: 5px;
+}
+#default-clipart-tab .clipart-next:hover span,
+#default-clipart-tab .clipart-prev:hover span{
+    color: #ffffff;
+}
+.printcart-clipart {
+    position: relative;
+    height: 120px;
+    width: 100%;
+}
+.printcart-storage-title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 4px;
+}
+.printcart-storage-title .printcart-title {
+    text-align: left;
+    font-weight: 600;
+}
+.printcart-clipart-storage {
+    margin-bottom: 20px;
+}
+.printcart-clipart .loading-photo {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 99;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.md-chips, body, button, html, input, md-bottom-sheet .md-subheader, select, textarea {
+    font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+.printcart-loading.printcart-loading,
+.printcart-loading {
+  width: 112px!important;
+  height: 112px!important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  display: none;
+}
+.loaded.printcart-loading,
+.nbd-load-page .printcart-loading {
+    display: block;
+}
+
+.printcart-loading .box1,
+.printcart-loading .box2,
+.printcart-loading .box3 {
+  border: 16px solid #000000;
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+}
+.printcart-loading .box1 {
+  width: 112px;
+  height: 48px;
+  margin-top: 64px;
+  margin-left: 0px;
+  animation: abox1 2s 1s forwards ease-in-out infinite;
+}
+
+.printcart-loading .box2 {
+  width: 48px;
+  height: 48px;
+  margin-top: 0px;
+  margin-left: 0px;
+  animation: abox2 2s 1s forwards ease-in-out infinite;
+}
+
+.printcart-loading .box3 {
+  width: 48px;
+  height: 48px;
+  margin-top: 0px;
+  margin-left: 64px;
+  animation: abox3 2s 1s forwards ease-in-out infinite;
+}
+
+@keyframes abox1 {
+  0% {
+    width: 112px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  12.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  25% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  37.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  50% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  62.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  75% {
+    width: 48px;
+    height: 112px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  87.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  100% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+
+@keyframes abox2 {
+  0% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  12.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  25% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  37.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  50% {
+    width: 112px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  62.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  75% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  87.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  100% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+}
+
+@keyframes abox3 {
+  0% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  12.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  25% {
+    width: 48px;
+    height: 112px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  37.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  50% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  62.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  75% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  87.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  100% {
+    width: 112px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+}
+
+
 @media screen and (max-width: 767px) {
     .nbd-sidebar .tabs-nav ul.main-tabs .tab i, .nbd-sidebar .tabs-nav ul.main-tabs .tab span {
         color: #000000;
@@ -341,5 +689,8 @@ h3, h4, input, p, span, textarea {
     }
     .nbd-main-bar ul.menu-left span {
         color: #000000;
+    }
+    .nbd-sidebar .tabs-nav ul.main-tabs .layerTab {
+        display: flex;
     }
 }
