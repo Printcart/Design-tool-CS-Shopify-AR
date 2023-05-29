@@ -245,44 +245,47 @@
 
                                 <!-- tab-clipart -->
                                 <div class="tab nbd-onload" ng-if="settings['nbdesigner_enable_clipart'] == 'yes'" id="tab-svg" nbd-scroll="scrollLoadMore(container, type)" data-container="#tab-svg" data-type="clipart" data-offset="20">
-                                    <div class="nbd-search">
-                                        <input type="text" name="search" placeholder="Search clipart" ng-model="resource.clipart.filter.search"/>
-                                        <i class="icon-nbd icon-nbd-fomat-search"></i>
-                                    </div>
                                     <div class="nbd-tab-contents">
-                                        <div class="nbd-tab-content active" id="default-clipart-tab">
-                                            <div class="printcart-clipart-storage printcart-clipart-storage-{{cat.id}}" ng-repeat="cat in resource.clipart.data.cat">
-                                                <div class="printcart-storage-title">
-                                                    {{cat.name}}
-                                                </div>
-                                                <div class="printcart-clipart">
-                                                    <button class="clipart-prev" aria-label="Preview" ng-click="onClipartPrev(cat.id)" type="button">
-                                                        <span aria-hidden="true">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                                                <path fill="currentColor" d="M15.45 17.97 9.5 12.01a.25.25 0 0 1 0-.36l5.87-5.87a.75.75 0 0 0-1.06-1.06l-5.87 5.87c-.69.68-.69 1.8 0 2.48l5.96 5.96a.75.75 0 0 0 1.06-1.06z"></path>
-                                                            </svg>
-                                                        </span>    
-                                                    </button>
-                                                    <div class="tab-main tab-scroll">
-                                                        <div class="nbd-items-dropdown" >
-                                                            <div class="clipart-wrap">
-                                                                <div class="clipart-item in-view" nbd-drag="art.url" extenal="false" type="svg"  ng-repeat="art in resource.clipart.data.cat_data[cat.id]" repeat-end="onEndRepeat('clipart')">
-                                                                    <img  ng-src="{{art.url}}" ng-click="addArt(art, true, true)" alt="{{art.name}}">
+                                        <div class="tab-scroll">
+                                            <div class="nbd-tab-content active" id="default-clipart-tab">
+                                                <div class="printcart-clipart-storage printcart-clipart-storage-{{cat.id}}" ng-repeat="cat in resource.clipart.data.cat">
+                                                    <div class="printcart-storage-title">
+                                                        <div class="printcart-title">
+                                                            {{cat.name}}
+                                                        </div>
+                                                        <div class="printcart-show-all">
+                                                            Show all
+                                                        </div>
+                                                    </div>
+                                                    <div class="printcart-clipart">
+                                                        <button class="clipart-prev" aria-label="Preview" ng-click="onClipartPrev(cat.id)" type="button">
+                                                            <span aria-hidden="true">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                                    <path fill="currentColor" d="M15.45 17.97 9.5 12.01a.25.25 0 0 1 0-.36l5.87-5.87a.75.75 0 0 0-1.06-1.06l-5.87 5.87c-.69.68-.69 1.8 0 2.48l5.96 5.96a.75.75 0 0 0 1.06-1.06z"></path>
+                                                                </svg>
+                                                            </span>    
+                                                        </button>
+                                                        <div class="tab-main tab-scroll">
+                                                            <div class="nbd-items-dropdown" >
+                                                                <div class="clipart-wrap">
+                                                                    <div class="clipart-item in-view" nbd-drag="art.url" extenal="false" type="svg"  ng-repeat="art in resource.clipart.data.cat_data[cat.id]" repeat-end="onEndRepeat('clipart')">
+                                                                        <img  ng-src="{{art.url}}" ng-click="addArt(art, true, true)" alt="{{art.name}}">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <button class="clipart-next" aria-label="Next" ng-click="onClipartNext(cat.id)" type="button">
-                                                        <span aria-hidden="true">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                                                <path fill="currentColor" d="m8.55 5.78 5.96 5.97c.1.1.1.25 0 .35l-5.87 5.87a.75.75 0 0 0 1.06 1.06l5.87-5.87c.69-.68.69-1.79 0-2.47L9.61 4.72a.75.75 0 0 0-1.06 1.06z"></path>
+                                                        <button class="clipart-next" aria-label="Next" ng-click="onClipartNext(cat.id)" type="button">
+                                                            <span aria-hidden="true">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                                    <path fill="currentColor" d="m8.55 5.78 5.96 5.97c.1.1.1.25 0 .35l-5.87 5.87a.75.75 0 0 0 1.06 1.06l5.87-5.87c.69-.68.69-1.79 0-2.47L9.61 4.72a.75.75 0 0 0-1.06 1.06z"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <div class="loading-photo" >
+                                                            <svg class="circular" viewBox="25 25 50 50">
+                                                                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
                                                             </svg>
-                                                        </span>
-                                                    </button>
-                                                    <div class="loading-photo" >
-                                                        <svg class="circular" viewBox="25 25 50 50">
-                                                            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-                                                        </svg>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
