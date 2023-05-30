@@ -60,6 +60,27 @@
                                     </div>
                                     <div id="nbd-overlay"></div>
                                 </li>
+                                <li>
+                                    
+                                <li class="menu-item item-edit">
+                                    <model-viewer
+                                        src="/assets/image/DamagedHelmet.glb"
+                                        ar
+                                        ar-modes="webxr scene-viewer quick-look"
+                                        ar-scale="fixed"
+                                        ar-placement="wall"
+                                        camera-controls
+                                        reveal="manual"
+                                        disable-pan
+                                        disable-tap
+                                        disable-zoom
+                                        >
+                                        <div class="progress-bar hide" slot="progress-bar">
+                                            <div class="update-bar"></div>
+                                        </div>
+                                        <button slot="ar-button" id="ar-button">3D View</button>
+                                    </model-viewer>
+                                </li>
                             </ul>
                             <ul class="nbd-main-menu menu-center">
                                 <li class="menu-item undo-redo" ng-click="undo()" ng-class="stages[currentStage].states.isUndoable ? 'in' : 'nbd-disabled'">
@@ -80,6 +101,7 @@
                                     <i class="nbd-svg-icon" >
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z"/></svg>
                                     </i>
+                                </li>
                                 </li>
                                 <li class="menu-item item-process animated slideInDown animate900 save-data" data-overlay="overlay" 
                                     ng-click="saveData()"
@@ -2487,5 +2509,9 @@
         <script type='text/javascript' src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
         <script type="text/javascript" src="./assets/js/designer-modern.min.js"></script>
         <script type="text/javascript" src="./assets/js/app-modern.min.js"></script>
+        <script
+            type="module"
+            src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"
+        ></script>
     </body>
 </html>
