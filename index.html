@@ -60,27 +60,6 @@
                                     </div>
                                     <div id="nbd-overlay"></div>
                                 </li>
-                                <li>
-                                    
-                                <li class="menu-item item-edit">
-                                    <model-viewer
-                                        src="/assets/image/DamagedHelmet.glb"
-                                        ar
-                                        ar-modes="webxr scene-viewer quick-look"
-                                        ar-scale="fixed"
-                                        ar-placement="wall"
-                                        camera-controls
-                                        reveal="manual"
-                                        disable-pan
-                                        disable-tap
-                                        disable-zoom
-                                        >
-                                        <div class="progress-bar hide" slot="progress-bar">
-                                            <div class="update-bar"></div>
-                                        </div>
-                                        <button slot="ar-button" id="ar-button">3D View</button>
-                                    </model-viewer>
-                                </li>
                             </ul>
                             <ul class="nbd-main-menu menu-center">
                                 <li class="menu-item undo-redo" ng-click="undo()" ng-class="stages[currentStage].states.isUndoable ? 'in' : 'nbd-disabled'">
@@ -90,6 +69,16 @@
                                 <li class="menu-item undo-redo" ng-click="redo()" ng-class="stages[currentStage].states.isRedoable ? 'in' : 'nbd-disabled'">
                                     <i class="icon-nbd-baseline-redo" ></i>
                                     <span class="nbd-font-size-12">Redo</span>
+                                </li>
+                            </ul>
+                            <ul class="nbd-main-menu menu-center">
+                                <li class="menu-item in">
+                                    <span ng-click="showPopupAR()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-badge-ar" viewBox="0 0 16 16">
+                                            <path d="m3.794 11 .47-1.542H6.27L6.739 11H8L5.996 5.001H4.607L2.595 11h1.2zm1.503-4.852.734 2.426h-1.52l.734-2.426h.052zm5.598-1.147H8.5V11h1.173V8.763h1.064L11.787 11h1.327L11.91 8.583C12.455 8.373 13 7.779 13 6.9c0-1.147-.773-1.9-2.105-1.9zm-1.222 2.87V5.933h1.05c.63 0 1.05.347 1.05.989 0 .633-.408.95-1.067.95H9.673z"/>
+                                          <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+                                        </svg>
+                                    </span>
                                 </li>
                             </ul>
                             <ul class="nbd-main-menu menu-right">
@@ -277,7 +266,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="printcart-clipart">
-                                                        <button class="clipart-prev" aria-label="Preview" ng-click="onClipartPrev(cat.id)" type="button">
+                                                        <button class="clipart-prev" aria-label="Preview" ng-click="onClipartPrev(cat.id)" type="button" title="Preview">
                                                             <span aria-hidden="true">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                                                     <path fill="currentColor" d="M15.45 17.97 9.5 12.01a.25.25 0 0 1 0-.36l5.87-5.87a.75.75 0 0 0-1.06-1.06l-5.87 5.87c-.69.68-.69 1.8 0 2.48l5.96 5.96a.75.75 0 0 0 1.06-1.06z"></path>
@@ -293,7 +282,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <button class="clipart-next" aria-label="Next" ng-click="onClipartNext(cat.id)" type="button">
+                                                        <button class="clipart-next" aria-label="Next" ng-click="onClipartNext(cat.id)" type="button" title="Next">
                                                             <span aria-hidden="true">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                                                     <path fill="currentColor" d="m8.55 5.78 5.96 5.97c.1.1.1.25 0 .35l-5.87 5.87a.75.75 0 0 0 1.06 1.06l5.87-5.87c.69-.68.69-1.79 0-2.47L9.61 4.72a.75.75 0 0 0-1.06 1.06z"></path>
@@ -2174,6 +2163,39 @@
                     </div>
                 </div>
                 <!-- end popup created-project-success -->
+
+                 <!-- 'popup-contents/view AR -->
+                <div class="nbd-popup popup-select view-ar-on-mobile" data-animate="scale">
+                    <div class="main-popup">
+                        <i class="icon-nbd icon-nbd-clear close-popup"></i>
+                        <div class="head">
+                            View this product on the mobile
+                        </div>
+                        <div class="body">
+                            <div class="main-body">
+                                <model-viewer
+                                    src="/assets/image/DamagedHelmet.glb"
+                                    ar
+                                    ar-modes="webxr scene-viewer quick-look"
+                                    ar-scale="fixed"
+                                    ar-placement="wall"
+                                    camera-controls
+                                    reveal="manual"
+                                    disable-pan
+                                    disable-tap
+                                    disable-zoom
+                                    >
+                                    <div class="progress-bar hide" slot="progress-bar">
+                                        <div class="update-bar"></div>
+                                    </div>
+                                    <button slot="ar-button" id="ar-button">3D View</button>
+                                </model-viewer>
+                            </div>
+                        </div>
+                        <div class="footer"></div>
+                    </div>
+                </div>
+                <!-- 'popup-contents/view AR -->
 
                 <!-- popup-contents/confirm-delete-stage -->
                 <div class="nbd-popup popup-select delete-stage-alert" data-animate="scale">

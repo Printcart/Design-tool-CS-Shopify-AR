@@ -372,12 +372,13 @@ h3, h4, input, p, span, textarea {
     transform: translateY(-50%);
     z-index: 99;
     cursor: pointer;
-    background-color: transparent;
+    background-color: #ffffff;
     border: 0;
     color: #ffffffe6;
     padding: 0;
-    width: 24px;
-    height: 100%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
 #default-clipart-tab .clipart-prev {
     position: absolute;
@@ -386,17 +387,21 @@ h3, h4, input, p, span, textarea {
     transform: translateY(-50%);
     z-index: 99;
     cursor: pointer;
-    background-color: transparent;
+    background-color: #ffffff;
     border: 0;
     color: #ffffffe6;
     padding: 0;
-    width: 24px;
-    height: 100%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+#default-clipart-tab .clipart-next span,
+#default-clipart-tab .clipart-prev span{
+    color: #000000;
 }
 #default-clipart-tab .clipart-next:hover,
 #default-clipart-tab .clipart-prev:hover {
     background-color: rgba(0,0,0,.4);
-    border-radius: 5px;
 }
 #default-clipart-tab .clipart-next:hover span,
 #default-clipart-tab .clipart-prev:hover span{
