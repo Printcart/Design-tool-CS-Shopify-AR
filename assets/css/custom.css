@@ -338,10 +338,16 @@ body {
 #tab-product .tab-scroll {
     height: calc(100% - 60px);
 }
-#tab-product .loading-photo {
+.loading-product {
     width: 40px;
     height: 40px;
     display: none;
+    position: relative;
+    margin: 0 auto;
+}
+.product-load-more-wrap {
+    text-align: center;
+    padding: 10px;
 }
 .popup-nbd-products .loading-photo {
     width: 40px;

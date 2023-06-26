@@ -1829,9 +1829,16 @@
                                         <div class="box2"></div>
                                         <div class="box3"></div>
                                     </div>
-                                    <div class="tab-load-more ng-hide" ng-show="!resource.products.onload && ( resource.products.next || 
-                                    resource.products.total > resource.products.currentPage * resource.products.perPage )">
-                                        <a class="nbd-button" ng-click="scrollLoadMoreProduct()">Load more</a>
+                                    <div class="product-load-more-wrap">
+                                        <div class="loading-product" >
+                                            <svg class="circular" viewBox="25 25 50 50">
+                                                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                                            </svg>
+                                        </div>
+                                        <div class="tab-load-more ng-hide" ng-show="!resource.products.onload && ( resource.products.next || 
+                                        resource.products.total > resource.products.currentPage * resource.products.perPage )">
+                                            <a class="nbd-button" ng-click="scrollLoadMoreProduct()">Load more</a>
+                                        </div>
                                     </div>
                                     <div ng-if="resource.products.filtereProducts.length == 0 && !resource.products.onload" class="nbd-products">
                                         No results!
