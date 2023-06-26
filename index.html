@@ -257,7 +257,7 @@
                                 <!-- tab-clipart -->
                                 <div class="tab nbd-onload" ng-if="settings['nbdesigner_enable_clipart'] == 'yes'" id="tab-svg">
                                     <div class="nbd-search" ng-if="!isShowAllClipartWithoutCat">
-                                        <input type="text" name="search" placeholder="Search clipart" ng-model="resource.clipart.filter.search"/>
+                                        <input type="text" class="search-clipart" name="search" placeholder="Search clipart" ng-keyup="searchClipart($event, searchString)" ng-model="searchString"/>
                                         <i class="icon-nbd icon-nbd-fomat-search"></i>
                                     </div>
                                     <div class="printcart-back-clipart-tab-wrap" ng-if="isShowAllClipartWithoutCat">
@@ -267,7 +267,7 @@
                                             </svg>
                                         </span>
                                         <h4>
-                                            <b>{{currentClipartCat}}</b>
+                                            <b>{{currentClipartCat.name}}</b>
                                         </h4>
                                     </div>
                                     <div class="nbd-tab-contents">
@@ -278,7 +278,9 @@
                                                         <div class="printcart-title">
                                                             {{cat.name}}
                                                         </div>
-                                                        <div class="printcat-btn-show-all" ng-click="showClipartByCat(cat)">Show all</div>
+                                                        <div class="printcat-btn-show-all" ng-click="showClipartByCat(cat)">
+                                                            Show all
+                                                        </div>
                                                     </div>
                                                     <div class="printcart-clipart">
                                                         <button class="clipart-prev" aria-label="Preview" ng-click="onClipartPrev(cat.id)" type="button" title="Preview">
@@ -311,9 +313,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div ng-if="isShowAllClipartWithoutCat" class="nbd-items-dropdown" >
+                                                <div ng-if="isShowAllClipartWithoutCat" class="nbd-items-dropdown printcat-clipart-by-cat" >
                                                     <div class="clipart-wrap">
-                                                        <div class="clipart-item in-view" nbd-drag="art.url" extenal="false" type="svg"  ng-repeat="art in resource.clipartByCat.filteredArts" repeat-end="onEndRepeat('clipart')">
+                                                        <div class="clipart-item" nbd-drag="art.url" extenal="false" type="svg"  ng-repeat="art in resource.clipartByCat.filteredArts" repeat-end="onEndRepeat('clipartByCat')">
                                                             <img ng-src="{{art.url}}" ng-click="addArt(art, true, true)" alt="{{art.name}}">
                                                         </div>
                                                     </div>
@@ -323,7 +325,9 @@
                                                         </svg>
                                                     </div>
                                                     <div class="tab-load-more" style="display: none;" ng-show="!resource.clipartByCat.onload && resource.clipartByCat.data.length && (resource.clipartByCat.nextPage || resource.clipartByCat.currentPage * resource.clipartByCat.perPage < resource.clipartByCat.data.length)">
-                                                        <a class="nbd-button" ng-click="scrollLoadMore('#tab-svg', 'clipartByCat')">Load more</a>
+                                                        <a class="nbd-button printcart-load-more" ng-click="scrollLoadMoreClipartByCat()">
+                                                            Load more
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>

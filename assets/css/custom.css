@@ -363,12 +363,12 @@ h3, h4, input, p, span, textarea {
     height: 120px;
     width: auto;
 }
-.nbd-sidebar .nbd-items-dropdown .loading-photo {
+/*.nbd-sidebar .nbd-items-dropdown .loading-photo {
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-}
+}*/
 #default-clipart-tab .clipart-next {
     position: absolute;
     top: 50%;
@@ -423,6 +423,7 @@ h3, h4, input, p, span, textarea {
     margin-right: 10px;
 }
 .printcat-btn-show-all {
+    text-decoration: underline;
     cursor: pointer;
     font-weight: 600;
 }
