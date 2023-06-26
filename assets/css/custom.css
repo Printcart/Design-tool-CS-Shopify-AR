@@ -151,12 +151,18 @@
 .nbd-sidebar #tab-svg .cliparts-category, #tab-element .tab-main, #tab-photo .tab-main {
     margin-top: 0 !important;
 }
+.nbd-warning .main-warning {
+    background: #ff244d;
+}
 .pc-tab-clipart {
     padding: 0 10px;
     margin-bottom: 12px;
 }
 #tab-svg .nbd-tab-contents {
     height: calc(100% - 55px);
+}
+#tab-svg .nbd-tab-contents.with-search-bar {
+    height: calc(100% - 115px);
 }
 #tab-svg .nbd-tab-contents .nbd-tab-content {
     height: 100%;
@@ -284,6 +290,13 @@ body {
 .icon-nbd {
     color: #000000;
 }
+.icon-nbd {
+    color: #000000;
+}
+.icon-nbd-fomat-search {
+    color: #000000!important;
+    cursor: pointer;
+}
 .nbd-main-menu .sub-menu {
     color: #000000;
 }
@@ -326,6 +339,11 @@ body {
     height: calc(100% - 60px);
 }
 #tab-product .loading-photo {
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+.popup-nbd-products .loading-photo {
     width: 40px;
     height: 40px;
     display: none;
