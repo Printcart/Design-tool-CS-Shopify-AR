@@ -151,12 +151,12 @@
                                 <span class="hide-tablet"><i class="icon-nbd icon-nbd-fomat-top-left rotate-135"></i></span>
 
                                 <!-- tab-product -->
-                                <div class="tab active tab-first" id="tab-product" nbd-scroll="scrollLoadMoreProduct(container, type)" data-container="#tab-product" data-type="product" data-offset="20">
-                                    <h4><b>Products</b></h4>
+                                <div class="tab active tab-first" id="tab-product" nbd-scroll="scrollLoadMoreVariantionsProduct(container, type)" data-container="#tab-product" data-type="product" data-offset="20">
+                                    <h4><b>Variantions</b></h4>
                                     <div class="tab-main tab-scroll">
                                         <div class="nbd-products">
                                             <div class="nbd-products-container">
-                                                <div class="nbd-product" title="Select Product" ng-click="changeProduct( product.id )" ng-repeat="product in resource.variations.filtereProducts">
+                                                <div class="nbd-product" title="{{product.name}}" ng-click="changeProduct( product.id, false )" ng-repeat="product in resource.variations.filtereProducts">
                                                     <div class="nbd-product-wrap">
                                                         <div class="nbd-product-image" ng-style="{'background-image': 'url(' + product.product_image.url + ')'}"></div>
                                                         <div class="nbd-product-title">
@@ -174,7 +174,7 @@
                                             </div>
                                             <div class="tab-load-more ng-hide" ng-show="!resource.variations.onload && ( resource.variations.next || 
                                             resource.variations.total > resource.variations.currentPage * resource.variations.perPage )">
-                                                <a class="nbd-button" ng-click="scrollLoadMoreProduct()">Load more</a>
+                                                <a class="nbd-button" ng-click="scrollLoadMoreVariantionsProduct()">Load more</a>
                                             </div>
                                         </div>
                                         <div ng-if="resource.variations.filtereProducts.length == 0 && !resource.variations.onload" class="nbd-products">
@@ -343,11 +343,11 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="printcart-loading">
-                                                <div class="box1"></div>
-                                                <div class="box2"></div>
-                                                <div class="box3"></div>
-                                            </div>
+                                        </div>
+                                        <div class="printcart-loading">
+                                            <div class="box1"></div>
+                                            <div class="box2"></div>
+                                            <div class="box3"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1823,7 +1823,7 @@
                                     </div> -->
                                     <div class="nbd-products-wrap">
                                         <div class="nbd-product-wrap" 
-                                            title="Select Product"
+                                            title="{{product.name}}"
                                             ng-click="changeProduct( product.id )" 
                                             ng-repeat="product in resource.products.filtereProducts">
                                             <div class="nbd-product-image" ng-style="{'background-image': 'url(' + product.product_image.url + ')'}"></div>
