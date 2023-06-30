@@ -751,4 +751,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     .nbd-sidebar .tabs-nav ul.main-tabs .layerTab {
         display: flex;
     }
+    .nbd-sidebar .tabs-nav ul.main-tabs .tab.active {
+        background: #f2f2f2;
+    }
 }
