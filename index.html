@@ -275,7 +275,7 @@
                                     <div class="nbd-tab-contents" ng-class="isSearchingClipart && isShowAllClipartWithoutCat ? 'with-search-bar' : ''">
                                         <div class="tab-scroll">
                                             <div class="nbd-tab-content active" id="default-clipart-tab">
-                                                <div ng-if="!isShowAllClipartWithoutCat" class="printcart-clipart-storage printcart-clipart-storage-{{cat.id}}" ng-repeat="cat in resource.clipart.data.cat">
+                                                <div ng-if="!isShowAllClipartWithoutCat && resource.clipart.data.cat_data[cat.id].length > 0" class="printcart-clipart-storage printcart-clipart-storage-{{cat.id}}" ng-repeat="cat in resource.clipart.data.cat">
                                                     <div class="printcart-storage-title">
                                                         <div class="printcart-title">
                                                             {{cat.name}}
