@@ -2,6 +2,9 @@
 .tool_draw li a.menuUp {
     opacity: 1;
 }
+#selectedTab {
+    background-color: #F2F2F2;
+}
 #tab-font .sub-menu {
     padding: 20px 10px;
 }
