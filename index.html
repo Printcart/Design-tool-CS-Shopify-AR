@@ -127,7 +127,7 @@
                                         <img class="sidebar-icon" src="./assets/image/text.png" />
                                         <span>Text</span>
                                     </li>
-                                    <li id="nav-cliparts" data-tour="cliparts" data-tour-priority="4" ng-click="disableDrawMode();disablePreventClickMode();getResource('clipart', '#tab-svg', true)" class="tab animated slideInLeft animate600 tab-clipart">
+                                    <li id="nav-cliparts" data-tour="cliparts" data-tour-priority="4" ng-click="disableDrawMode();disablePreventClickMode();getResource('myClipart', '#tab-svg', true)" class="tab animated slideInLeft animate600 tab-clipart">
                                         <img class="sidebar-icon" src="./assets/image/elements.png" />
                                         <span>&#201;lements</span>
                                     </li>
@@ -275,7 +275,7 @@
                                     <div class="nbd-tab-contents" ng-class="isSearchingClipart && isShowAllClipartWithoutCat ? 'with-search-bar' : ''">
                                         <div class="tab-scroll">
                                             <div class="nbd-tab-content active" id="default-clipart-tab">
-                                                <div ng-if="!isShowAllClipartWithoutCat && resource.clipart.data.cat_data[cat.id].length > 0" class="printcart-clipart-storage printcart-clipart-storage-{{cat.id}}" ng-repeat="cat in resource.clipart.data.cat">
+                                                <div ng-if="!isShowAllClipartWithoutCat && resource[currentClipartType].data.cat_data[cat.id].length > 0" class="printcart-clipart-storage printcart-clipart-storage-{{cat.id}}" ng-repeat="cat in resource[currentClipartType].data.cat">
                                                     <div class="printcart-storage-title">
                                                         <div class="printcart-title">
                                                             {{cat.name}}
@@ -295,7 +295,7 @@
                                                         <div class="tab-main tab-scroll">
                                                             <div class="nbd-items-dropdown" >
                                                                 <div class="clipart-wrap clipart-wrap-row">
-                                                                    <div class="clipart-item in-view" nbd-drag="art.url" extenal="false" type="svg"  ng-repeat="art in resource.clipart.data.cat_data[cat.id]" repeat-end="onEndRepeat('clipart')">
+                                                                    <div class="clipart-item in-view" nbd-drag="art.url" extenal="false" type="svg"  ng-repeat="art in resource[currentClipartType].data.cat_data[cat.id]" repeat-end="onEndRepeat(currentClipartType)">
                                                                         <img ng-src="{{art.url}}" ng-click="addArt(art, true, true)" alt="{{art.name}}">
                                                                     </div>
                                                                 </div>
@@ -308,7 +308,7 @@
                                                                 </svg>
                                                             </span>
                                                         </button>
-                                                        <div ng-if="resource.clipart.data.cat_data[cat.id].length == 0 && !resource.clipart.onload">
+                                                        <div ng-if="resource[currentClipartType].data.cat_data[cat.id].length == 0 && !resource[currentClipartType].onload">
                                                             No results!
                                                         </div>
                                                         <div class="loading-photo" style="display: none;">
@@ -321,7 +321,7 @@
                                                 <div ng-if="isShowAllClipartWithoutCat" class="nbd-items-dropdown printcat-clipart-by-cat" nbd-scroll="scrollLoadMoreClipartByCat()" data-container="#tab-svg" data-type="clipartByCat" data-offset="30">
                                                     <div class="tab-main tab-scroll">
                                                         <div class="nbd-items-dropdown" >
-                                                            <div class="clipart-wrap">
+                                                            <div class="clipart-wrap clipart-wrap-col">
                                                                 <div class="clipart-item" nbd-drag="art.url" extenal="false" type="svg"  ng-repeat="art in resource.clipartByCat.filteredArts" repeat-end="onEndRepeat('clipartByCat')">
                                                                     <img ng-src="{{art.url}}" ng-click="addArt(art, true, true)" alt="{{art.name}}">
                                                                 </div>

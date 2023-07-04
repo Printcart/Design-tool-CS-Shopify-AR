@@ -365,9 +365,6 @@ h3, h4, input, p, span, textarea {
 .nbd-main-menu button span, .nbd-main-menu li span {
     color: #000000;
 }
-.typography-items .typography-item img {
-    filter: grayscale(100%);
-}
 .nbd-sidebar #tab-svg #default-clipart-tab .tab-main {
     height: initial;
 }
@@ -391,6 +388,12 @@ h3, h4, input, p, span, textarea {
     max-width: initial;
     height: 120px;
     width: auto;
+    border: none;
+    background: none;
+}
+.clipart-wrap .clipart-item img {
+    border: none;
+    background: none;
 }
 /*.nbd-sidebar .nbd-items-dropdown .loading-photo {
     left: 50%;
