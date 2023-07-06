@@ -766,4 +766,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     .sidebar-icon {
         max-width: 30px;
     }
+    .android input[name="search"]:focus {
+        width: 100%;
+        position: unset;
+    }
 }
