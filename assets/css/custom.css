@@ -757,4 +757,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     .nbd-sidebar .tabs-nav ul.main-tabs .tab.active {
         background: #f2f2f2;
     }
+    .nbd-mode-modern.safari .nbd-sidebar .tabs-content, .nbd-mode-modern.iphone .nbd-sidebar .tabs-content {
+        height: calc(100vh - 190px);
+    }
+    .nbd-mode-modern.android  .nbd-sidebar .tabs-content, .nbd-mode-modern.chrome .nbd-sidebar .tabs-content {
+        height: calc(100vh - 170px);
+    }
+    .sidebar-icon {
+        max-width: 30px;
+    }
 }

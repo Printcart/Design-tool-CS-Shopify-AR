@@ -25,13 +25,7 @@
                         <div class="nbd-main-bar">
                             <i class="icon-nbd icon-nbd-menu menu-mobile"></i>
                             <ul class="nbd-main-menu menu-left">
-                                <li class="menu-item item-edit">
-                                    <span class="nbd-close close-designtool" title="Close">
-                                        <i class="icon-nbd icon-nbd-fomat-highlight-off icon-close" ng-click="closeDesignTool()"></i>
-                                    </span>
-                                </li>
-                                
-                                <li class="menu-item item-edit" style="padding-left: 15px; padding-right: 15px"><img src="./assets/image/logo_noir.png" style="max-height: 30px" /></li>
+                                <li class="menu-item item-edit" style="padding-left: 15px; padding-right: 15px"><img src="./assets/image/logo_noir.png" style="max-height: 24px" /></li>
                                 <li class="menu-item item-edit">
                                     <span>File</span>
                                     <div class="sub-menu" data-pos="left">
@@ -43,6 +37,9 @@
                                             <li class="sub-menu-item flex space-between" ng-click="exportDesign()">
                                                 <span>Export Design</span>
                                                 <small>{{ 'M-S-E' | keyboardShortcut }}</small>
+                                            </li>
+                                            <li class="sub-menu-item flex space-between" ng-click="closeDesignTool()">
+                                                <span>Close</span>
                                             </li>
                                         </ul>
                                     </div>
