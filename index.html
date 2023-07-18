@@ -153,14 +153,14 @@
                                     <div class="tab-main tab-scroll">
                                         <div class="nbd-products">
                                             <div class="nbd-products-container">
-                                                <div class="nbd-product" title="{{product.name}}" ng-click="changeProduct( product.id, false )" ng-repeat="product in resource.variations.filtereProducts">
+                                                <div class="nbd-product" title="{{product.description}}" ng-click="changeProduct( product.id, false )" ng-repeat="product in resource.variations.filtereProducts">
                                                     <div class="nbd-product-wrap">
                                                         <div class="nbd-product-image" ng-style="{'background-image': 'url(' + product.product_image.url + ')'}"></div>
-                                                      <!--   <div class="nbd-product-title">
+                                                        <div class="nbd-product-title" ng-if="product.description">
                                                             <a href="#">
-                                                                {{product.name}}
+                                                                {{product.description}}
                                                             </a>
-                                                        </div> -->
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
