@@ -544,6 +544,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     width: 24px;
     height: 24px;
 }
+.nbd-tip {
+    transform: translateX(calc(100% - 70px));
+    border-left: none;
+}
 
 @keyframes abox1 {
   0% {
@@ -769,5 +773,20 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     .android input[name="search"]:focus {
         width: 100%;
         position: unset;
+    }
+    .nbd-tip {
+        display: flex;
+        bottom: 80px;
+        top: unset;
+        z-index: 99999999;
+        transform: translateX(calc(100% - 60px));
+    }
+    .tip-icon {
+        width: 60px;
+    }
+    .tip-image {
+        width: 40px;
+        height: 40px;
+        max-width: 40px;
     }
 }
