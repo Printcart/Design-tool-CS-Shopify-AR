@@ -149,17 +149,64 @@
 
                                 <!-- tab-product -->
                                 <div class="tab active tab-first" id="tab-product" nbd-scroll="scrollLoadMoreVariantionsProduct(container, type)" data-container="#tab-product" data-type="product" data-offset="20">
-                                    <h4><b>Variantions</b></h4>
+                                    <h4><b>Product</b></h4>
                                     <div class="tab-main tab-scroll">
                                         <div class="nbd-products">
-                                            <div class="nbd-products-container">
-                                                <div class="nbd-product" title="{{product.description}}" ng-click="changeProduct( product.id, false )" ng-repeat="product in resource.variations.filtereProducts">
-                                                    <div class="nbd-product-wrap">
-                                                        <div class="nbd-product-image" ng-style="{'background-image': 'url(' + product.product_image.url + ')'}"></div>
-                                                        <div class="nbd-product-title" ng-if="product.description">
-                                                            <a href="#">
-                                                                {{product.description}}
-                                                            </a>
+                                            <div class="nbd-product nbd-product-tab">
+                                                <div class="nbd-main-product">
+                                                    <div class="nbo-options-wrap">
+                                                        <div class="quick-view">
+                                                            <div class="product">
+                                                                <div class="quick-view-title">
+                                                                    <h1 class="product_title entry-title">
+                                                                        {{settings.product_data.option.name}}
+                                                                    </h1>
+                                                                </div>
+                                                                <div class="woocommerce-product-details__short-description">
+                                                                    <div ng-bind-html="renderHtml(settings.product_data.option.description)"></div>
+                                                                </div>
+                                                                <div class="quick-view-content">
+                                                                    <div class="nbd-option-wrapper">
+                                                                        <div class="nbo-fields-wrapper">
+                                                                            <div class="nbd-option-field" ng-if="printing_options.color">
+                                                                                <div class="nbd-field-header">
+                                                                                    <label>
+                                                                                        {{printing_options.color.title}}
+                                                                                    </label> 
+                                                                                </div>    
+                                                                                <div class="nbd-field-content">
+                                                                                    <div class="nbd-swatch-wrap">
+                                                                                        <span ng-repeat="(index, attr) in printing_options.color.attributes">
+                                                                                            <input ng-change="changePrintingOptions()" ng-model="printing_options.color.value" value="{{index}}" type="radio" id="nbd-field-{{attr.id}}">
+                                                                                            <label class="nbd-swatch" ng-style="{'background': attr.value}" title="{{attr.name}}" for="nbd-field-{{attr.id}}">
+                                                                                                <span class="nbd-swatch-tooltip">
+                                                                                                    {{attr.name}}
+                                                                                                </span>            
+                                                                                            </label>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="nbd-option-field" ng-if="printing_options.size">
+                                                                                <div class="nbd-field-header">
+                                                                                    <label>
+                                                                                        {{printing_options.size.title}}
+                                                                                    </label> 
+                                                                                </div>    
+                                                                                <div class="nbd-field-content">
+                                                                                    <div class="__nbd-dropdown-wrap">
+                                                                                        <select ng-change="changePrintingOptions();" ng-model="printing_options.size.value" class="nbo-dropdown">
+                                                                                            <option value="{{index}}" ng-repeat="(index, attr) in printing_options.size.attributes">
+                                                                                                {{attr.name}}
+                                                                                            </option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                      
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

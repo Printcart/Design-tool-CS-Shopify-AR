@@ -310,11 +310,11 @@ body {
     height: 50px;
     max-width: 50px;
 }
-.nbd-products .nbd-product {
+/*.nbd-products .nbd-product {
     width: 50%;
     padding: 5px;
     display: inline-block;
-}
+}*/
 .nbd-products .nbd-product-wrap {
     width: 100%;
     margin-right: 0;
@@ -543,6 +543,132 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .printcart-button-ar svg.bi-badge-ar {
     width: 24px;
     height: 24px;
+}
+
+.nbd-product-tab .quick-view-title {
+    color: #000000!important;
+    margin-bottom: 6px;
+}
+.nbd-option-wrapper {
+    margin-bottom: 1.1em;
+}
+.nbd-option-field {
+    background-color: #fff;
+    margin-bottom: 1.1em;
+    border: 1px solid #f8f8f8;
+}
+.nbd-field-header {
+    padding: 10px;
+    background: #f8f8f8;
+    color: #000000;
+    font-weight: bold;
+}
+.nbd-option-wrapper label {
+    cursor: pointer;
+    margin: 0 !important;
+    margin: 0px 4px 2px!important;
+}
+.nbd-field-header label {
+    font-weight: bold;
+}
+.nbd-option-field .nbd-field-content {
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.nbd-field-content {
+    padding: 10px;
+}
+.nbd-product-tab .nbd-option-field select {
+    width: 100%;
+}
+.nbd-option-field select {
+    min-width: 150px;
+}
+.nbo-dropdown {
+    border: 1px solid #EEE;
+    height: 36px;
+    padding: 3px 36px 3px 8px;
+    background-color: transparent;
+    line-height: 100%;
+    outline: 0;
+    background-image: url(../image/arrow.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.nbd-option-wrapper input[type="radio"] {
+    display: none;
+}
+.nbd-swatch-wrap input[type="radio"]:checked + label {
+    border: 2px solid #404762;
+    position: relative;
+    display: inline-block;
+}
+.nbd-option-wrapper label {
+    cursor: pointer;
+    margin: 0 !important;
+    margin: 0px 4px 2px!important;
+}
+.nbd-swatch {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    position: relative;
+}
+.nbd-swatch-tooltip {
+    background: #404762;
+    color: #fff !important;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    pointer-events: none;
+    padding: 5px 7px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translate3d(-50%,0%,0);
+    -moz-transform: translate3d(-50%,0%,0);
+    transform: translate3d(-50%,0%,0);
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 200px;
+    z-index: 99;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    transition: all .4s;
+}
+.nbd-swatch-tooltip:before {
+    content: '';
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #404762;
+    position: absolute;
+    bottom: -5px;
+    margin-left: -3px;
+    left: 50%;
+}
+.nbd-swatch-wrap input[type="radio"]:checked + label:after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    content: "";
+    width: 6px;
+    height: 10px;
+    display: block;
+    border: solid #404762;
+    border-width: 0 2px 2px 0;
+    position: absolute;
+    top: 7px;
+    left: 12px;
 }
 .nbd-tip {
     transform: translateX(calc(100% - 70px));
